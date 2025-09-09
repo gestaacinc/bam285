@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Needs Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <!-- This is the main container, content will be injected by JavaScript -->
+    <div id="app"></div>
+
+    <script>
+        // --- SLIDE DATA ---
+        // All slide content and presenter notes are stored here.
+        const slides = [
+            {
+                title: "Title Slide",
+                content: `
+                    <h1 class="text-5xl font-bold tracking-tight">Identifying Business Needs and Problems</h1>
+                    <p class="mt-6 text-2xl text-gray-600 dark:text-gray-300">The Starting Point for Effective Business Analysis</p>
+                    
+                `,
+                notes: "Hello everyone, and welcome. Today, we're diving into a fundamental topic in business analysis: Identifying Business Needs and Problems. Understanding this is the essential first step before any project can begin or any solution can be built. My name is , and I'll be guiding you through this today."
+            },
+            {
+                title: "Introduction",
+                content: `
+                    <h2 class="text-4xl font-bold">The Foundation of Business Success</h2>
+                    <ul class="mt-8 text-left text-2xl space-y-6 max-w-4xl list-disc list-inside">
+                        <li>Every business faces challenges and has needs.</li>
+                        <li>Properly identifying these is the first step to solving them.</li>
+                        <li>Today, we'll learn the skills to analyze and define business needs.</li>
+                    </ul>
+                `,
+                notes: "Every single business, from a local coffee shop to a multinational corporation, constantly deals with needs and challenges. Some are small, some are large, but the success of the business often depends on how well they are addressed. The skills we'll cover today—how to properly identify, analyze, and define these needs—are crucial for making smart decisions and driving the business forward."
+            },
+            {
+                title: "What is a Business Need?",
+                content: `
+                    <h2 class="text-4xl font-bold">What is a Business Need?</h2>
+                    <p class="mt-6 text-2xl text-gray-600 dark:text-gray-300 max-w-5xl">A business need refers to the <strong class="text-blue-500">resources, methods, or capabilities</strong> an organization requires to achieve its objectives.</p>
+                     <ul class="mt-8 text-left text-2xl space-y-4 max-w-4xl">
+                        <li>✔ Identified through analysis and critical thinking.</li>
+                        <li>✔ They bridge the gap between the current state and the desired future state.</li>
+                    </ul>
+                `,
+                notes: "So let's start with the core definition. What exactly is a business need? In simple terms, a business need is any resource, method, or capability that an organization must have to meet its goals and objectives. It's the gap between where the business is today and where it wants to be. These needs aren't always obvious; they are uncovered through careful analysis and critical thinking."
+            },
+            {
+                title: "Needs vs. Requirements",
+                content: `
+                    <h2 class="text-4xl font-bold">Needs vs. Requirements: What's the Difference?</h2>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl text-2xl">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-3xl font-bold text-blue-500 mb-4">Need (The "Why")</h3>
+                            <p>A high-level goal or problem to be solved.</p>
+                            <p class="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg italic">"We need to increase sales."</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-3xl font-bold text-green-500 mb-4">Requirement (The "What")</h3>
+                            <p>A specific capability needed to address the need.</p>
+                            <p class="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg italic">"We require a customer relationship management system."</p>
+                        </div>
+                    </div>
+                `,
+                notes: "It's very common for people to use the terms 'needs' and 'requirements' interchangeably, but in business analysis, they have distinct meanings. The 'need' is the high-level 'why'—it's the problem to be solved or the goal to be achieved. For instance, 'We need to increase our online sales.' The 'requirement' is the specific 'what'—a detailed description of a solution to fulfill that need. For example, 'We require a website with an e-commerce platform and a secure checkout process.'"
+            },
+            {
+                title: "The 8 Essential Business Needs (Part 1)",
+                content: `
+                    <h2 class="text-4xl font-bold">The 8 Essential Business Needs (Part 1)</h2>
+                    <div class="mt-8 grid grid-cols-2 gap-6 max-w-5xl text-left text-xl">
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-blue-600 dark:text-blue-400 text-2xl">1. Data & Information</strong>For planning, decision-making, and performance analysis.</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-blue-600 dark:text-blue-400 text-2xl">2. Systems</strong>Software to automate work and streamline productivity.</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-blue-600 dark:text-blue-400 text-2xl">3. Applications</strong>Tools that help increase productivity (e.g., Email).</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-blue-600 dark:text-blue-400 text-2xl">4. Infrastructure</strong>The physical and digital foundation (buildings, software, IT).</div>
+                    </div>
+                `,
+                notes: "Business needs can be broken down into several key areas. Let's look at the first four. First, Data and Information, which is the lifeblood of modern business, used for everything from planning to decision-making. Second, Systems, which are the software and automated workflows that help streamline operations. Third, Applications, which are the specific tools people use every day, like email, to get their work done. And fourth, Infrastructure, which is the foundational hardware, software, and buildings that the business runs on."
+            },
+            {
+                title: "The 8 Essential Business Needs (Part 2)",
+                content: `
+                    <h2 class="text-4xl font-bold">The 8 Essential Business Needs (Part 2)</h2>
+                    <div class="mt-8 grid grid-cols-2 gap-6 max-w-5xl text-left text-xl">
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-green-600 dark:text-green-400 text-2xl">5. Processes</strong>Organized workflows for key activities (e.g., order processing).</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-green-600 dark:text-green-400 text-2xl">6. Customer Experience</strong>How customers interact with the business.</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-green-600 dark:text-green-400 text-2xl">7. Marketing Strategies</strong>Making customers aware of products and services.</div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-4 rounded-lg"><strong class="font-semibold block text-green-600 dark:text-green-400 text-2xl">8. Products & Services</strong>The core value offered to customers.</div>
+                    </div>
+                `,
+                notes: "Continuing on, we have Processes, which are the defined steps for activities like processing an order or onboarding a new hire. Next is the Customer Experience—every interaction a customer has with your company. Then we have Marketing Strategies, which is how you make customers aware of what you offer. And finally, and most importantly, the Products and Services themselves, which are the core value you provide to your customers."
+            },
+            {
+                title: "Key Categories of Needs",
+                content: `
+                    <h2 class="text-4xl font-bold">Two Major Categories of Needs</h2>
+                     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl text-2xl">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-left">
+                            <h3 class="text-3xl font-bold text-purple-500 mb-4">Capability Needs</h3>
+                            <p>Enables the business to <strong class="font-semibold">produce or provide</strong> something new.</p>
+                            <p class="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-xl italic">Example: A bakery needs a new oven to start selling bread.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-left">
+                           <h3 class="text-3xl font-bold text-orange-500 mb-4">Improvement Needs</h3>
+                           <p>Enables the business to increase its <strong class="font-semibold">efficiency and productivity.</strong></p>
+                           <p class="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-xl italic">Example: A company needs route optimization software to reduce fuel costs.</p>
+                        </div>
+                    </div>
+                `,
+                notes: "We can group most business needs into two main categories. First, Capability Needs. These are needs that allow a business to do something new—to produce a new product or offer a new service. For example, a restaurant needs a liquor license to be able to sell alcohol. The second category is Improvement Needs. These are focused on making the business more efficient and productive—doing what it already does, but better, faster, or cheaper. For instance, a factory might need an automated assembly line to increase its production speed."
+            },
+            {
+                title: "How to Define Business Needs",
+                content: `
+                    <h2 class="text-4xl font-bold">How to Define Needs: A 3-Step Approach</h2>
+                    <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-2xl">
+                        <div class="bg-blue-500 text-white p-6 rounded-lg shadow-lg flex-1">
+                            <div class="text-5xl font-bold mb-2">1</div>
+                            <p>Understand Business Goals</p>
+                        </div>
+                         <div class="text-4xl text-gray-400 font-thin">&rarr;</div>
+                        <div class="bg-green-500 text-white p-6 rounded-lg shadow-lg flex-1">
+                            <div class="text-5xl font-bold mb-2">2</div>
+                            <p>Identify Strategies</p>
+                        </div>
+                         <div class="text-4xl text-gray-400 font-thin">&rarr;</div>
+                        <div class="bg-purple-500 text-white p-6 rounded-lg shadow-lg flex-1">
+                            <div class="text-5xl font-bold mb-2">3</div>
+                            <p>Analyze Challenges</p>
+                        </div>
+                    </div>
+                `,
+                notes: "So, how do you actually go about defining these needs? It's a three-step process. First, you must clearly identify and understand the business goals. You can't solve a problem if you don't know what success looks like. Second, you identify the strategies the business is using to reach those goals. And third, you analyze what is helping or hurting that strategy—you look at the current successes, problems, and challenges. This is where the true needs will become clear."
+            },
+            {
+                title: "Conclusion",
+                content: `
+                     <h2 class="text-4xl font-bold">Conclusion & Key Takeaways</h2>
+                    <ul class="mt-8 text-left text-2xl space-y-6 max-w-4xl">
+                        <li>✔ Understanding business needs is <strong class="text-blue-500">critical for success.</strong></li>
+                        <li>✔ Needs are the <strong class="text-blue-500">"why,"</strong> and requirements are the <strong class="text-blue-500">"what."</strong></li>
+                        <li>✔ A <strong class="text-blue-500">structured approach</strong> helps uncover the real challenges and opportunities.</li>
+                    </ul>
+                `,
+                notes: "To summarize, a deep understanding of business needs is the foundation of any successful project or initiative. Remember that needs are the high-level 'why,' while requirements are the detailed 'what.' By looking at all eight essential areas of the business and following a structured, three-step approach, you can effectively uncover the real challenges and opportunities that will drive your business forward."
+            },
+            {
+                title: "Q&A",
+                content: `
+                    <h1 class="text-6xl font-bold">Questions?</h1>
+                    <p class="mt-8 text-2xl">[Your Name/Contact Information]</p>
+                `,
+                notes: "That concludes the presentation. Thank you for your time and attention. I'm now happy to answer any questions you might have."
+            }
+        ];
+
+        // --- APPLICATION LOGIC ---
+
+        const app = document.getElementById('app');
+        const params = new URLSearchParams(window.location.search);
+        const view = params.get('view');
+        const channel = new BroadcastChannel('business_needs_presentation');
+
+        let currentSlide = 0;
+
+        function init() {
+            if (view === 'presenter') {
+                renderPresenterView();
+            } else if (view === 'audience') {
+                renderAudienceView();
+            } else {
+                renderLauncherView();
+            }
+        }
+
+        function renderLauncherView() {
+            app.innerHTML = `
+                <div class="min-h-screen flex items-center justify-center">
+                    <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-lg shadow-2xl">
+                        <h1 class="text-3xl font-bold">Business Needs Presentation</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Click the button below to start.</p>
+                        <button id="startBtn" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                            Start Presentation
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPresenterView() {
+            const slide = slides[currentSlide];
+            const nextSlide = slides[currentSlide + 1];
+
+            app.innerHTML = `
+                <div class="h-screen w-full grid grid-cols-3 gap-4 p-4 bg-gray-800 text-white">
+                    <div class="col-span-2 bg-gray-900 rounded-lg shadow-lg flex items-center justify-center p-4">
+                        <div class="slide-content w-full h-full transform scale-90">${slide.content}</div>
+                    </div>
+                    <div class="col-span-1 flex flex-col gap-4">
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-shrink-0">
+                            <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-2">Next: ${nextSlide ? nextSlide.title : 'End of Slides'}</h3>
+                            <div class="text-sm opacity-70 overflow-hidden h-24">
+                                ${nextSlide ? nextSlide.content : '<p>Click next to finish.</p>'}
+                            </div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-grow overflow-y-auto">
+                             <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-2">Presenter Notes</h3>
+                             <p class="text-base whitespace-pre-wrap">${slide.notes}</p>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-shrink-0 flex items-center justify-between">
+                            <p class="font-semibold">Slide ${currentSlide + 1} / ${slides.length}</p>
+                            <div class="flex gap-2">
+                                <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 font-bold py-2 px-4 rounded-lg">&larr; Prev</button>
+                                <button id="nextBtn" class="bg-blue-600 hover:bg-blue-500 font-bold py-2 px-4 rounded-lg">Next &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAudienceView() {
+            const slide = slides[currentSlide];
+            app.innerHTML = `
+                <div class="min-h-screen w-full flex items-center justify-center p-12 bg-white dark:bg-gray-900">
+                    <div class="slide-content w-full h-full">${slide.content}</div>
+                </div>
+            `;
+        }
+
+        function startPresentation() {
+            localStorage.setItem('currentSlide_needs', '0');
+            const audienceWindow = window.open(window.location.pathname + '?view=audience', 'AudienceView');
+            if (!audienceWindow) {
+                alert('Please allow pop-ups for this presentation to work correctly.');
+                return;
+            }
+            window.location.href = window.location.pathname + '?view=presenter';
+        }
+
+        function navigate(direction) {
+            const oldSlide = currentSlide;
+            if (direction === 'next' && currentSlide < slides.length - 1) {
+                currentSlide++;
+            } else if (direction === 'prev' && currentSlide > 0) {
+                currentSlide--;
+            }
+
+            if (oldSlide !== currentSlide) {
+                localStorage.setItem('currentSlide_needs', currentSlide);
+                channel.postMessage({ slide: currentSlide });
+                renderPresenterView();
+            }
+        }
+
+        function nextSlide() { navigate('next'); }
+        function prevSlide() { navigate('prev'); }
+
+        app.addEventListener('click', (e) => {
+            if (e.target.id === 'startBtn') startPresentation();
+            else if (e.target.id === 'nextBtn') nextSlide();
+            else if (e.target.id === 'prevBtn') prevSlide();
+        });
+
+        channel.onmessage = (event) => {
+            if (view === 'audience' && typeof event.data.slide !== 'undefined' && event.data.slide !== currentSlide) {
+                currentSlide = event.data.slide;
+                renderAudienceView();
+            }
+        };
+
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'currentSlide_needs' && view === 'audience') {
+                const newSlide = parseInt(e.newValue, 10);
+                if (!isNaN(newSlide) && currentSlide !== newSlide) {
+                    currentSlide = newSlide;
+                    renderAudienceView();
+                }
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const storedSlide = localStorage.getItem('currentSlide_needs');
+            currentSlide = storedSlide ? parseInt(storedSlide, 10) : 0;
+            init();
+
+            if (view === 'presenter') {
+                channel.postMessage({ slide: currentSlide });
+            }
+        });
+
+        if (view === 'presenter') {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    e.preventDefault();
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
