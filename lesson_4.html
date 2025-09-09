@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPM Lifecycle Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <!-- This is the main container, content will be injected by JavaScript -->
+    <div id="app"></div>
+
+    <script>
+        // --- SLIDE DATA ---
+        // All slide content and presenter notes are stored here.
+        const slides = [
+            {
+                title: "Title Slide",
+                content: `
+                    <h1 class="text-5xl font-bold tracking-tight">Understanding the Business Process Management (BPM) Lifecycle</h1>
+                    <p class="mt-6 text-2xl text-gray-600 dark:text-gray-300">A Framework for Continuous Improvement</p>
+          
+                `,
+                notes: "Good morning/afternoon, everyone. Thank you for being here. Today, we're going to explore the Business Process Management Lifecycle, which is a powerful framework that organizations use to drive continuous improvement and achieve their goals. My name is [Your Name], and I'm excited to walk you through this topic."
+            },
+            {
+                title: "Introduction to BPM",
+                content: `
+                    <h2 class="text-4xl font-bold">Introduction to Business Process Management</h2>
+                    <ul class="mt-8 text-left text-2xl space-y-6 max-w-4xl">
+                        <li><strong class="font-semibold">What is a Business Process?</strong> A flow of activities to complete a business transaction.</li>
+                        <li><strong class="font-semibold">What is BPM?</strong> The discipline of reviewing, analyzing, and improving these processes to enhance performance.</li>
+                        <li><strong class="font-semibold">Why is it Important?</strong> The effectiveness of these processes directly impacts business success.</li>
+                    </ul>
+                `,
+                notes: "Before we dive into the lifecycle itself, let's start with the basics. At the heart of every organization are its business processes. Think of a process as a series of activities or tasks that lead to a specific outcome—like onboarding a new employee, processing a customer order, or handling an invoice. Business Process Management, or BPM, is the discipline of actively managing and improving these processes. It’s not just about mapping them out; it’s about making them better. Why does this matter? Because the efficiency and effectiveness of these core processes have a direct and significant impact on the overall success of the business."
+            },
+            {
+                title: "The BPM Lifecycle",
+                content: `
+                    <h2 class="text-4xl font-bold">The BPM Lifecycle: A Cyclical Approach</h2>
+                    <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">A standardized, cyclical collection of actions to manage business processes.</p>
+                    <div class="mt-8 text-lg font-semibold flex items-center space-x-2">
+                        <span class="bg-blue-500 text-white rounded-full px-4 py-2">Design</span> <span class="text-2xl">&rarr;</span>
+                        <span class="bg-blue-500 text-white rounded-full px-4 py-2">Model</span> <span class="text-2xl">&rarr;</span>
+                        <span class="bg-green-500 text-white rounded-full px-4 py-2">Execute</span> <span class="text-2xl">&rarr;</span>
+                        <span class="bg-green-500 text-white rounded-full px-4 py-2">Monitor</span> <span class="text-2xl">&rarr;</span>
+                        <span class="bg-green-500 text-white rounded-full px-4 py-2">Optimize</span>
+                        <span class="text-2xl">&#8635;</span>
+                    </div>
+                    <p class="mt-6 text-2xl font-semibold">It's a loop of continuous improvement.</p>
+                `,
+                notes: "So, how do we systematically improve these processes? That's where the BPM Lifecycle comes in. The lifecycle is a standardized, cyclical approach to managing and enhancing business processes. As you can see from the diagram, it consists of five key stages: Design, Model, Execute, Monitor, and Optimize. The most important thing to understand is that this is a continuous loop. It’s not a project with a start and an end date. Once you finish the 'Optimize' stage, you circle back to 'Design' to find new ways to improve. It’s all about fostering a culture of continuous improvement."
+            },
+            {
+                title: "Stage 1: Design",
+                content: `
+                    <h2 class="text-4xl font-bold">Stage 1: Design</h2>
+                    <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Understand the 'as-is' process and identify what needs to change.</p>
+                    <ul class="mt-8 text-left text-2xl space-y-4 list-disc list-inside">
+                        <li>Analyze the business process</li>
+                        <li>Conduct data gathering (Interviews, documents)</li>
+                        <li>Understand business rules</li>
+                    </ul>
+                `,
+                notes: "The first stage is Design. The main goal here is to get a deep understanding of the current process, often called the 'as-is' process. This is the discovery phase. Key activities include analyzing the existing workflow, gathering data through interviews with the people involved in the process, and reviewing any existing documentation. It's crucial at this stage to identify the pain points, inefficiencies, and the underlying business rules that govern the process."
+            },
+            {
+                title: "Stage 2: Model",
+                content: `
+                    <h2 class="text-4xl font-bold">Stage 2: Model</h2>
+                     <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Create a visual 'to-be' representation of the new process.</p>
+                    <p class="mt-8 text-2xl max-w-3xl">Use tools like flowcharts and diagrams to map out the new process, helping everyone understand how it will work before implementation.</p>
+                `,
+                notes: "Once we have a clear picture of the current process and what needs to change, we move to the Model stage. Here, the goal is to create a visual representation of the new, improved 'to-be' process. This is usually done using tools like flowcharts or diagrams. This visual model is incredibly valuable because it allows everyone to see and understand exactly how the new process is intended to work before any resources are spent on implementation."
+            },
+            {
+                title: "Stage 3: Execute",
+                content: `
+                    <h2 class="text-4xl font-bold">Stage 3: Execute</h2>
+                    <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Put the new process model into action.</p>
+                    <p class="mt-8 text-2xl max-w-3xl">The modeled process is put to the test in a real-world environment. This stage is critical for gaining stakeholder confidence.</p>
+                `,
+                notes: "Next up is the Execute stage. This is where the rubber meets the road. We take the process model we designed and put it into action in a real-world environment. This could be a pilot program with a small team or a full rollout, depending on the scale of the change. This stage is critical for testing the new process and, just as importantly, for gaining the trust and confidence of stakeholders. Seeing the new process work effectively builds buy-in across the organization."
+            },
+            {
+                title: "Stage 4: Monitor",
+                content: `
+                    <h2 class="text-4xl font-bold">Stage 4: Monitor</h2>
+                     <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Measure the performance and impact of the new process.</p>
+                     <ul class="mt-8 text-left text-2xl space-y-4 list-disc list-inside">
+                        <li>Collect performance data over time</li>
+                        <li>Develop Key Performance Indicators (KPIs)</li>
+                        <li>Detect bottlenecks, delays, or errors</li>
+                    </ul>
+                `,
+                notes: "After the new process is up and running, we can't just assume it's working perfectly. We need to enter the Monitor stage. The goal here is to track the performance of the new process and measure its impact. We do this by collecting data on key activities. This data is then used to develop Key Performance Indicators, or KPIs, which are metrics that tell us how well the process is meeting its objectives. This is also where we can spot any new bottlenecks, delays, or potential errors that weren't anticipated."
+            },
+            {
+                title: "Stage 5: Optimize",
+                content: `
+                    <h2 class="text-4xl font-bold">Stage 5: Optimize</h2>
+                    <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Refine the process based on real-world performance data.</p>
+                    <div class="mt-8 text-left text-xl space-y-3 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-gray-800 dark:text-gray-200">
+                        <p><strong class="font-semibold text-gray-900 dark:text-white">Goal:</strong> Make targeted changes to remove bottlenecks and improve efficiency.</p>
+                        <p><strong class="font-semibold text-gray-900 dark:text-white">Benefits:</strong> Decrease wasted labor, improve quality, ensure compliance, shorten execution time.</p>
+                    </div>
+                `,
+                notes: "The insights we gain from the Monitor stage lead us directly to the final stage: Optimize. Here, we use the performance data and KPIs to make further refinements. We analyze the information to identify opportunities for improvement and then make targeted changes to remove any bottlenecks and enhance efficiency. The benefits of proper optimization are significant—they can include reducing wasted time and resources, improving the quality of the output, ensuring compliance, and shortening the time it takes to complete the process."
+            },
+            {
+                title: "Tools & Technology",
+                content: `
+                    <h2 class="text-4xl font-bold">Enabling BPM: Tools & Technology</h2>
+                    <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Technology aligns IT and operations with business goals.</p>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-4xl text-lg">
+                        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-gray-800 dark:text-gray-200"><strong class="text-blue-500 dark:text-blue-400">Business Rules Engine:</strong> Manages 'if-then' logic without code.</div>
+                        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-gray-800 dark:text-gray-200"><strong class="text-blue-500 dark:text-blue-400">Business Process Monitoring:</strong> Dashboards for real-time performance overview.</div>
+                        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-gray-800 dark:text-gray-200"><strong class="text-blue-500 dark:text-blue-400">BPMS:</strong> Consolidates applications and data in one place.</div>
+                        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-gray-800 dark:text-gray-200"><strong class="text-blue-500 dark:text-blue-400">Workflow Modelers:</strong> Provides high-level, visual diagrams of workflows.</div>
+                    </div>
+                `,
+                notes: "Of course, managing this entire lifecycle would be incredibly difficult without the right technology. BPM technology plays a vital role in aligning a company's IT infrastructure and operations with its business goals. There are several key types of BPM technologies. A Business Rules Engine allows users to manage 'if-then' logic without needing to write code. Business Process Monitoring tools, like management dashboards, provide a real-time view of performance. A Business Process Management Suite, or BPMS, acts as a central hub, consolidating applications and data. And finally, Workflow Modelers are the tools used to create the visual diagrams we discussed in the Model stage."
+            },
+            {
+                title: "Examples of BPM Tools",
+                content: `
+                    <h2 class="text-4xl font-bold">Examples of BPM Tools</h2>
+                    <p class="mt-4 text-2xl text-gray-600 dark:text-gray-300">Many software tools are available to support the BPM lifecycle.</p>
+                    <div class="mt-6 text-2xl flex flex-wrap justify-center gap-4 font-semibold">
+                        <span class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">Kissflow</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">monday.com</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">Wrike</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">Pipefy</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">Forecast</span>
+                    </div>
+                `,
+                notes: "The market is full of excellent software tools designed to support BPM initiatives. As you can see on the screen, these range from platforms like Kissflow, which is a low-code BPM software, to tools like Monday.com for creative teams, Wrike for collaboration, and Pipefy for specialized processes in finance and HR. There are even tools like Forecast that leverage AI to help analyze and improve your processes."
+            },
+            {
+                title: "Conclusion",
+                content: `
+                     <h2 class="text-4xl font-bold">Conclusion & Key Takeaways</h2>
+                    <ul class="mt-8 text-left text-2xl space-y-6 max-w-4xl">
+                        <li>The BPM Lifecycle is a powerful, <strong class="text-blue-500">continuous loop.</strong></li>
+                        <li>Its primary goal is to drive constant <strong class="text-blue-500">improvement</strong> in business performance.</li>
+                        <li>Leveraging the right technology makes organizations more <strong class="text-blue-500">efficient, agile, and successful.</strong></li>
+                        <li class="pt-4 text-3xl font-semibold text-center w-full">BPM is a journey, not a destination.</li>
+                    </ul>
+                `,
+                notes: "So, to wrap things up, the Business Process Management Lifecycle—Design, Model, Execute, Monitor, and Optimize—is a powerful framework for driving continuous improvement. Its ultimate goal is to make an organization more efficient, agile, and successful by constantly refining its core processes. By embracing this cycle and leveraging the right technology, any organization can achieve better outcomes. And the most important takeaway is to remember that BPM is a continuous journey, not a final destination."
+            },
+            {
+                title: "Q&A",
+                content: `
+                    <h1 class="text-6xl font-bold">Questions?</h1>
+                    
+                `,
+                notes: "That concludes my presentation. Thank you for your time and attention. I would now be happy to answer any questions you may have."
+            }
+        ];
+
+        // --- APPLICATION LOGIC ---
+
+        const app = document.getElementById('app');
+        const params = new URLSearchParams(window.location.search);
+        const view = params.get('view');
+        const channel = new BroadcastChannel('bpm_presentation');
+
+        let currentSlide = 0;
+
+        function init() {
+            // Determine which view to render based on URL parameter
+            if (view === 'presenter') {
+                renderPresenterView();
+            } else if (view === 'audience') {
+                renderAudienceView();
+            } else {
+                renderLauncherView();
+            }
+        }
+
+        // --- RENDER FUNCTIONS ---
+
+        function renderLauncherView() {
+            app.innerHTML = `
+                <div class="min-h-screen flex items-center justify-center">
+                    <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-lg shadow-2xl">
+                        <h1 class="text-3xl font-bold">BPM Lifecycle Presentation</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300">Click the button below to start the presentation.</p>
+                        <button id="startBtn" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                            Start Presentation
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPresenterView() {
+            const slide = slides[currentSlide];
+            const nextSlide = slides[currentSlide + 1];
+
+            app.innerHTML = `
+                <div class="h-screen w-full grid grid-cols-3 gap-4 p-4 bg-gray-800 text-white">
+                    <!-- Main Slide View -->
+                    <div class="col-span-2 bg-gray-900 rounded-lg shadow-lg flex items-center justify-center p-4">
+                        <div class="slide-content w-full h-full transform scale-90">${slide.content}</div>
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="col-span-1 flex flex-col gap-4">
+                        <!-- Next Slide Preview -->
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-shrink-0">
+                            <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-2">Next: ${nextSlide ? nextSlide.title : 'End of Slides'}</h3>
+                            <div class="text-sm opacity-70 overflow-hidden h-24">
+                                ${nextSlide ? nextSlide.content : '<p>Click next to finish.</p>'}
+                            </div>
+                        </div>
+                        <!-- Notes -->
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-grow overflow-y-auto">
+                             <h3 class="text-lg font-bold border-b border-gray-700 pb-2 mb-2">Presenter Notes</h3>
+                             <p class="text-base whitespace-pre-wrap">${slide.notes}</p>
+                        </div>
+                         <!-- Controls -->
+                        <div class="bg-gray-900 rounded-lg shadow-lg p-4 flex-shrink-0 flex items-center justify-between">
+                            <p class="font-semibold">Slide ${currentSlide + 1} / ${slides.length}</p>
+                            <div class="flex gap-2">
+                                <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 font-bold py-2 px-4 rounded-lg">&larr; Prev</button>
+                                <button id="nextBtn" class="bg-blue-600 hover:bg-blue-500 font-bold py-2 px-4 rounded-lg">Next &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAudienceView() {
+            const slide = slides[currentSlide];
+            app.innerHTML = `
+                <div class="min-h-screen w-full flex items-center justify-center p-12 bg-white dark:bg-gray-900">
+                    <div class="slide-content w-full h-full">${slide.content}</div>
+                </div>
+            `;
+        }
+
+        // --- CONTROL & SYNC LOGIC ---
+
+        function startPresentation() {
+            localStorage.setItem('currentSlide', '0');
+            const audienceWindow = window.open(window.location.pathname + '?view=audience', 'AudienceView');
+            if (!audienceWindow) {
+                alert('Please allow pop-ups for this presentation to work correctly.');
+                return;
+            }
+            window.location.href = window.location.pathname + '?view=presenter';
+        }
+
+        function navigate(direction) {
+            const oldSlide = currentSlide;
+            if (direction === 'next' && currentSlide < slides.length - 1) {
+                currentSlide++;
+            } else if (direction === 'prev' && currentSlide > 0) {
+                currentSlide--;
+            }
+
+            if (oldSlide !== currentSlide) {
+                localStorage.setItem('currentSlide', currentSlide);
+                channel.postMessage({ slide: currentSlide });
+                renderPresenterView();
+            }
+        }
+
+        function nextSlide() { navigate('next'); }
+        function prevSlide() { navigate('prev'); }
+
+        // Use a single delegated event listener for all clicks within the #app container
+        app.addEventListener('click', (e) => {
+            if (e.target.id === 'startBtn') {
+                startPresentation();
+            } else if (e.target.id === 'nextBtn') {
+                nextSlide();
+            } else if (e.target.id === 'prevBtn') {
+                prevSlide();
+            }
+        });
+
+        channel.onmessage = (event) => {
+            if (view === 'audience' && typeof event.data.slide !== 'undefined' && event.data.slide !== currentSlide) {
+                currentSlide = event.data.slide;
+                renderAudienceView();
+            }
+        };
+
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'currentSlide' && view === 'audience') {
+                const newSlide = parseInt(e.newValue, 10);
+                if (currentSlide !== newSlide) {
+                    currentSlide = newSlide;
+                    renderAudienceView();
+                }
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const storedSlide = localStorage.getItem('currentSlide');
+            currentSlide = storedSlide ? parseInt(storedSlide, 10) : 0;
+            init();
+
+            if (view === 'presenter') {
+                channel.postMessage({ slide: currentSlide });
+            }
+        });
+
+        if (view === 'presenter') {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === ' ') {
+                    e.preventDefault();
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
